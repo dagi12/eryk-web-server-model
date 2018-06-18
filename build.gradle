@@ -1,0 +1,16 @@
+group 'pl.edu.amu.wmi'
+version '0.10'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+}
+
+
