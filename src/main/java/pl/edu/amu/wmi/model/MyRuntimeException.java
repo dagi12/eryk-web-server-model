@@ -7,4 +7,8 @@ public class MyRuntimeException extends RuntimeException {
     public MyRuntimeException(String message) {
         super(message);
     }
+
+    public MyRuntimeException(NoSuchFieldException e) {
+        super(e);
+    }
 }
