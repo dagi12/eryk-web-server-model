@@ -3,22 +3,22 @@ package pl.edu.amu.wmi.model;
 /**
  * Stworzone przez Eryk Mariankowski dnia 16.12.17.
  */
-public class GeneralResponse {
+public class GeneralResponse<T> {
 
     protected boolean isDone = true;
     private String errorMessage;
-    private Object item;
+    private T item;
 
     public GeneralResponse(String errorMessage) {
         this.errorMessage = errorMessage;
         this.isDone = false;
     }
 
-    public GeneralResponse(Object item) {
+    public GeneralResponse(T item) {
         this.item = item;
     }
 
-    public GeneralResponse(Object item, boolean isDone) {
+    public GeneralResponse(T item, boolean isDone) {
         this.item = item;
         this.isDone = isDone;
     }
@@ -26,11 +26,11 @@ public class GeneralResponse {
     public GeneralResponse() {
     }
 
-    public Object getItem() {
+    public T getItem() {
         return item;
     }
 
-    public void setItem(Object item) {
+    public void setItem(T item) {
         this.item = item;
     }
 
