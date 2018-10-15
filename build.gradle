@@ -10,7 +10,7 @@ repositories {
 }
 
 dependencies {
-
+    compile "io.swagger:swagger-annotations:1.5.20"
 }
 
 
