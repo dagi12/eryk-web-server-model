@@ -6,7 +6,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * Stworzone przez Eryk Mariankowski dnia 16.12.17.
  */
-@ApiModel("Response wrapper for target response item")
+@ApiModel(description = "Response wrapper for target response item")
 public class GeneralResponse<T> {
 
     protected boolean isDone = true;
