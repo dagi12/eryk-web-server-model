@@ -9,37 +9,37 @@ import io.swagger.annotations.ApiModelProperty;
 @ApiModel(description = "Response wrapper for target response item")
 public class GeneralResponse<T> {
 
-    protected boolean isDone = true;
+    protected boolean success = true;
 
     @ApiModelProperty("Provided only if done is false")
     private String errorMessage;
 
     @ApiModelProperty("Provided only if done is true")
-    private T item;
+    private T data;
 
     public GeneralResponse(String errorMessage) {
         this.errorMessage = errorMessage;
-        this.isDone = false;
+        this.success = false;
     }
 
-    public GeneralResponse(T item) {
-        this.item = item;
+    public GeneralResponse(T data) {
+        this.data = data;
     }
 
-    public GeneralResponse(T item, boolean isDone) {
-        this.item = item;
-        this.isDone = isDone;
+    public GeneralResponse(T data, boolean success) {
+        this.data = data;
+        this.success = success;
     }
 
     public GeneralResponse() {
     }
 
-    public T getItem() {
-        return item;
+    public T getData() {
+        return data;
     }
 
-    public void setItem(T item) {
-        this.item = item;
+    public void setData(T data) {
+        this.data = data;
     }
 
     public String getErrorMessage() {
@@ -50,11 +50,11 @@ public class GeneralResponse<T> {
         this.errorMessage = errorMessage;
     }
 
-    public boolean isDone() {
-        return isDone;
+    public boolean isSuccess() {
+        return success;
     }
 
-    public void setDone(boolean done) {
-        isDone = done;
+    public void setSuccess(boolean success) {
+        this.success = success;
     }
 }
