@@ -11,4 +11,8 @@ public class MyRuntimeException extends RuntimeException {
     public MyRuntimeException(Exception e) {
         super(e);
     }
+
+    public MyRuntimeException(String message, Exception e) {
+        super(message, e);
+    }
 }
